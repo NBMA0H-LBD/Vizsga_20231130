@@ -1,4 +1,4 @@
-# 1. Osztályok Létrehozása
+# 1. Osztályok Létrehozása #
 
 
 from abc import ABC, abstractmethod
@@ -35,7 +35,7 @@ class Foglalas:
     def info(self):
         return f"Foglalás az {self.szoba.info()} szobára a {self.datum} napon"
 
-# 2. Foglalások kezelése
+# 2. Foglalások kezelése #
 
 class Hotel:
     def __int__(self,nev):
@@ -62,5 +62,9 @@ class Hotel:
     def foglalas_kilistazas(self):
         for foglalas in self.foglalasok:
             print(foglalas.info())
+
+# 3. Felhasználói Interfész és adatvalidáció #
+
+
 
 
