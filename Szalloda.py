@@ -73,5 +73,12 @@ class Hotel:
             print(foglalas.informacio())
 
 
+class Foglalas:
+    def __init__(self, szoba, datum, ar):
+        self.szoba = szoba
+        self.datum = datum
+        self.ar = ar
 
+    def info(self):
+        return f"Foglalás {self.szoba.info()} szobára a {self.datum} dátumra. Ár: {self.ar}"
 
