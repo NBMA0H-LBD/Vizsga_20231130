@@ -53,5 +53,14 @@ class Hotel:
                 self.foglalasok.append(foglalas)
                 return f"A {szobaszam} szobára lefoglalás történt {datum} napon, fizetendő : {szoba.ar}"
 
+    def foglalaslemondas(self,szobaszam, datum):
+        for foglalas in self.foglalasok:
+            if foglalas.szoba.szobaszam == szobaszam and foglalas.datum == datum:
+                self.foglalasok.remove(foglalas)
+                return f" A {szobaszam} szobára a foglalást lemondták {datum} napon"
+
+    def foglalas_kilistazas(self):
+        for foglalas in self.foglalasok:
+            print(foglalas.info())
 
 
