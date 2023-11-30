@@ -41,9 +41,17 @@ class Hotel:
     def __int__(self,nev):
         self.nev = nev
         self.szobak = []
-        self.foglalasok []
+        self.foglalasok = []
 
     def add_szoba(self,szoba):
         self.szobak.append(szoba)
+
+    def foglalas(self,szobaszam,datum):
+        for szoba in self.szobak:
+            if szoba.szobaszam == szobaszam:
+                foglalas = Foglalas(szoba,datum)
+                self.foglalasok.append(foglalas)
+                return f"A {szobaszam} szobára lefoglalás történt {datum} napon, fizetendő : {szoba.ar}"
+
 
 
